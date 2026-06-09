@@ -1,0 +1,3 @@
+[submodule "subnetra-src"]
+	path = subnetra-src
+	url = https://ghproxy.net/https://github.com/jamiesun/subnetra.git

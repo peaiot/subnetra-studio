@@ -1,0 +1,8 @@
+cargo:rerun-if-changed=D:\GIT\rust\subnetra-studio\target\debug\build\SLINT_DEFAULT_STYLE.txt
+cargo:rerun-if-changed=D:\GIT\rust\subnetra-studio\win-client\ui/main.slint
+cargo:rerun-if-env-changed=SLINT_STYLE
+cargo:rerun-if-env-changed=SLINT_FONT_SIZES
+cargo:rerun-if-env-changed=SLINT_SCALE_FACTOR
+cargo:rerun-if-env-changed=SLINT_ASSET_SECTION
+cargo:rerun-if-env-changed=SLINT_EMBED_RESOURCES
+cargo:rustc-env=SLINT_INCLUDE_GENERATED=D:\GIT\rust\subnetra-studio\target\debug\build\win-client-365c026f1033da79\out\main.rs

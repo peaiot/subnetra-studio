@@ -1,0 +1,9 @@
+D:\GIT\rust\subnetra-studio\target\debug\deps\libfutures_channel-16125a746de98c84.rmeta: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src/lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\lock.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\mpsc\mod.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\mpsc\queue.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\oneshot.rs
+
+D:\GIT\rust\subnetra-studio\target\debug\deps\futures_channel-16125a746de98c84.d: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src/lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\lock.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\mpsc\mod.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\mpsc\queue.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\oneshot.rs
+
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src/lib.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\lock.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\mpsc\mod.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\mpsc\queue.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\futures-channel-0.3.32\src\oneshot.rs:

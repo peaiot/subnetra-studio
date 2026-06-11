@@ -1,0 +1,10 @@
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/liblinux_raw_sys-bbd7c8bab7b995b8.rmeta: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/elf.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/auxvec.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/errno.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/general.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/ioctl.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/linux_raw_sys-bbd7c8bab7b995b8.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/elf.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/auxvec.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/errno.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/general.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/ioctl.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/elf.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/auxvec.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/errno.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/general.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/linux-raw-sys-0.12.1/src/x86_64/ioctl.rs:

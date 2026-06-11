@@ -1,0 +1,12 @@
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/libsalvo_cors-c813fe4c274786ed.rmeta: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_credentials.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_headers.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_methods.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_origin.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/expose_headers.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/max_age.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/vary.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/salvo_cors-c813fe4c274786ed.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_credentials.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_headers.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_methods.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_origin.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/expose_headers.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/max_age.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/vary.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_credentials.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_headers.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_methods.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/allow_origin.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/expose_headers.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/max_age.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/salvo-cors-0.63.1/src/vary.rs:

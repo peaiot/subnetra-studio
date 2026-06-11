@@ -1,0 +1,12 @@
+/mnt/d/GIT/rust/subnetra-studio/target/release/deps/libasync_trait-a74b4027ee33b975.so: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/args.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/bound.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/expand.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/lifetime.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/parse.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/receiver.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/verbatim.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/release/deps/async_trait-a74b4027ee33b975.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/args.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/bound.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/expand.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/lifetime.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/parse.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/receiver.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/verbatim.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/args.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/bound.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/expand.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/lifetime.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/parse.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/receiver.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/async-trait-0.1.89/src/verbatim.rs:

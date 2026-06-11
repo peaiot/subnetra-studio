@@ -1,0 +1,2 @@
+cargo:rerun-if-changed=C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-compiler-1.2.0\widgets
+cargo:rustc-env=SLINT_WIDGETS_LIBRARY=D:\GIT\rust\subnetra-studio\target\debug\build\i-slint-compiler-a1dc59521f9b841b\out\included_library.rs

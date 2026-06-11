@@ -1,0 +1,10 @@
+D:\GIT\rust\subnetra-studio\target\debug\deps\libcopypasta-1448adbe63d28699.rmeta: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\common.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\windows_clipboard.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\nop_clipboard.rs
+
+D:\GIT\rust\subnetra-studio\target\debug\deps\libcopypasta-1448adbe63d28699.rlib: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\common.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\windows_clipboard.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\nop_clipboard.rs
+
+D:\GIT\rust\subnetra-studio\target\debug\deps\copypasta-1448adbe63d28699.d: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\common.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\windows_clipboard.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\nop_clipboard.rs
+
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\common.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\windows_clipboard.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\copypasta-0.8.2\src\nop_clipboard.rs:

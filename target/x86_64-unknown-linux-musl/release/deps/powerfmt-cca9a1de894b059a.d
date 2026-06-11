@@ -1,0 +1,11 @@
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/libpowerfmt-cca9a1de894b059a.rmeta: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/buf.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/ext.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/smart_display.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/smart_display_impls.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/libpowerfmt-cca9a1de894b059a.rlib: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/buf.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/ext.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/smart_display.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/smart_display_impls.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/powerfmt-cca9a1de894b059a.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/buf.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/ext.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/smart_display.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/smart_display_impls.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/buf.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/ext.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/smart_display.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/powerfmt-0.2.0/src/smart_display_impls.rs:

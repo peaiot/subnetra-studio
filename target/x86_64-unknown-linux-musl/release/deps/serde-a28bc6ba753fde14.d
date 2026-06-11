@@ -1,0 +1,14 @@
+D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\deps\libserde-a28bc6ba753fde14.rmeta: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\integer128.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\mod.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\de.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\ser.rs D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\build\serde-e6f216d8df13e030\out/private.rs
+
+D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\deps\libserde-a28bc6ba753fde14.rlib: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\integer128.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\mod.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\de.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\ser.rs D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\build\serde-e6f216d8df13e030\out/private.rs
+
+D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\deps\serde-a28bc6ba753fde14.d: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\integer128.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\mod.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\de.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\ser.rs D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\build\serde-e6f216d8df13e030\out/private.rs
+
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\integer128.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\mod.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\de.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\serde-1.0.228\src\private\ser.rs:
+D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\build\serde-e6f216d8df13e030\out/private.rs:
+
+# env-dep:OUT_DIR=D:\\GIT\\rust\\subnetra-studio\\target\\x86_64-unknown-linux-musl\\release\\build\\serde-e6f216d8df13e030\\out

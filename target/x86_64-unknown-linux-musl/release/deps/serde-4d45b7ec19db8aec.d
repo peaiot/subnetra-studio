@@ -1,0 +1,14 @@
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/libserde-4d45b7ec19db8aec.rmeta: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/integer128.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/mod.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/de.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/ser.rs /mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/build/serde-d5fba02daa4e71d6/out/private.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/libserde-4d45b7ec19db8aec.rlib: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/integer128.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/mod.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/de.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/ser.rs /mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/build/serde-d5fba02daa4e71d6/out/private.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/serde-4d45b7ec19db8aec.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/integer128.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/mod.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/de.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/ser.rs /mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/build/serde-d5fba02daa4e71d6/out/private.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/integer128.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/mod.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/de.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/serde-1.0.228/src/private/ser.rs:
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/build/serde-d5fba02daa4e71d6/out/private.rs:
+
+# env-dep:OUT_DIR=/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/build/serde-d5fba02daa4e71d6/out

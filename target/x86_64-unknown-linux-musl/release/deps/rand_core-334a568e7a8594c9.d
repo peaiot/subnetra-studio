@@ -1,0 +1,12 @@
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/librand_core-334a568e7a8594c9.rmeta: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/block.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/error.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/impls.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/le.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/os.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/librand_core-334a568e7a8594c9.rlib: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/block.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/error.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/impls.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/le.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/os.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/x86_64-unknown-linux-musl/release/deps/rand_core-334a568e7a8594c9.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/block.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/error.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/impls.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/le.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/os.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/block.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/error.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/impls.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/le.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/rand_core-0.6.4/src/os.rs:

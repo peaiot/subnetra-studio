@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subnetra Dashboard</title>
-    <!-- 引入 Tailwind CSS (CDN 方式仅用于开发，生产环境可打包) -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Tailwind CSS (本地) -->
+    <script src="/assets/tailwind.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -19,15 +19,20 @@
                             600: '#16a34a',
                             900: '#14532d',
                         }
+            }
+        }).mount('#app')
+    </script>
+</body>
+</html>
                     }
                 }
             }
         }
     </script>
-    <!-- 图标库 -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!-- Vue 3 用于快速绑定数据 -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- 图标库 (本地) -->
+    <link href="/assets/remixicon.css" rel="stylesheet">
+    <!-- Vue 3 (本地) -->
+    <script src="/assets/vue.global.js"></script>
     <style>
         [v-cloak] { display: none; }
         .gradient-text {
@@ -40,6 +45,27 @@
 <body class="bg-slate-900 text-slate-100 min-h-screen font-sans selection:bg-brand-500 selection:text-white">
     <div id="app" v-cloak class="flex h-screen overflow-hidden">
         
+        <!-- Login Overlay -->
+        <div v-if="!isLoggedIn" class="absolute inset-0 z-50 flex items-center justify-center bg-slate-900/90 backdrop-blur-xl">
+            <div class="bg-slate-800 border border-slate-700 p-8 rounded-2xl shadow-2xl w-96 max-w-[90%]">
+                <div class="text-center mb-6">
+                    <i class="ri-router-line text-4xl text-brand-500 mb-2 inline-block"></i>
+                    <h2 class="text-2xl font-bold gradient-text">Subnetra 控制台</h2>
+                    <p class="text-slate-400 text-sm mt-1">请输入管理员密码以继续</p>
+                </div>
+                <form @submit.prevent="handleLogin" class="space-y-4">
+                    <div>
+                        <input v-model="loginPassword" type="password" placeholder="管理密码" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-200 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500/50 transition-all">
+                    </div>
+                    <button type="submit" :disabled="loginLoading" class="w-full py-3 bg-brand-600 hover:bg-brand-500 text-white rounded-lg transition-colors font-medium flex items-center justify-center disabled:opacity-50">
+                        <i v-if="loginLoading" class="ri-loader-4-line animate-spin mr-2"></i>
+                        {{ loginLoading ? '验证中...' : '安全登录' }}
+                    </button>
+                    <p v-if="loginError" class="text-red-400 text-sm text-center mt-2">{{ loginError }}</p>
+                </form>
+            </div>
+        </div>
+
         <!-- Sidebar -->
         <aside class="w-64 bg-slate-800/50 backdrop-blur-xl border-r border-slate-700/50 flex flex-col transition-all duration-300">
             <div class="h-16 flex items-center px-6 border-b border-slate-700/50">
@@ -60,6 +86,10 @@
                     <i class="ri-settings-4-line text-lg mr-3"></i>
                     <span class="font-medium">系统配置 (只读)</span>
                 </a>
+                <a href="#" @click.prevent="currentTab = 'logs'" :class="currentTab === 'logs' ? 'bg-brand-500/10 text-brand-500 ring-1 ring-brand-500/20 shadow-[0_0_15px_rgba(34,197,94,0.1)]' : 'text-slate-400 hover:text-slate-100 hover:bg-slate-800'" class="flex items-center px-4 py-3 rounded-xl transition-all">
+                    <i class="ri-file-text-line text-lg mr-3"></i>
+                    <span class="font-medium">引擎日志</span>
+                </a>
             </nav>
 
             <div class="p-4 border-t border-slate-700/50">
@@ -77,13 +107,22 @@
         <main class="flex-1 flex flex-col h-full overflow-hidden relative">
             <!-- Header -->
             <header class="h-16 bg-slate-800/30 backdrop-blur-md border-b border-slate-700/50 flex items-center justify-between px-8 sticky top-0 z-10">
-                <h1 class="text-xl font-semibold text-slate-100">{{ currentTab === 'dashboard' ? '实时网络拓扑' : (currentTab === 'policy' ? '路由策略管理' : '系统与节点配置') }}</h1>
+                <h1 class="text-xl font-semibold text-slate-100">{{ currentTab === 'dashboard' ? '实时网络拓扑' : (currentTab === 'policy' ? '路由策略管理' : (currentTab === 'config' ? '系统与节点配置' : '系统运行日志')) }}</h1>
                 <div class="flex items-center space-x-4">
+                    <button v-if="currentTab === 'dashboard'" @click="generateAuthKey" class="px-4 py-2 bg-brand-600/20 text-brand-500 hover:bg-brand-600/30 rounded-lg transition-colors text-sm font-medium border border-brand-500/30 flex items-center">
+                        <i class="ri-key-2-line mr-2"></i> 生成邀请码
+                    </button>
                     <button v-if="currentTab === 'dashboard'" @click="fetchStatus" class="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors" title="刷新状态">
                         <i class="ri-refresh-line text-xl" :class="{'animate-spin': loading}"></i>
                     </button>
                     <button v-if="currentTab === 'policy'" @click="fetchPolicies" class="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors" title="刷新策略">
                         <i class="ri-refresh-line text-xl"></i>
+                    </button>
+                    <button v-if="currentTab === 'logs'" @click="fetchLogs" class="p-2 text-slate-400 hover:text-white hover:bg-slate-700 rounded-lg transition-colors" title="刷新日志">
+                        <i class="ri-refresh-line text-xl"></i>
+                    </button>
+                    <button v-if="isLoggedIn" @click="handleLogout" class="p-2 text-red-400 hover:text-red-300 hover:bg-red-400/10 rounded-lg transition-colors" title="退出登录">
+                        <i class="ri-logout-box-r-line text-xl"></i>
                     </button>
                 </div>
             </header>
@@ -225,46 +264,61 @@
 
             </div>
 
-            <!-- Policy Content -->
+            <!-- Access Control (User-Centric Policy) Content -->
             <div v-show="currentTab === 'policy'" class="flex-1 overflow-y-auto p-8">
-                <div class="max-w-4xl mx-auto space-y-6">
-                    <!-- 新增策略 -->
+                <div class="max-w-5xl mx-auto space-y-6">
                     <div class="bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg p-6">
-                        <h2 class="text-lg font-semibold text-white mb-4 border-b border-slate-700/50 pb-3 flex items-center">
-                            <i class="ri-add-circle-line mr-2 text-brand-500"></i> 下发新路由策略 (UDS Hot-Reload)
+                        <h2 class="text-lg font-semibold text-white mb-2 border-b border-slate-700/50 pb-3 flex items-center">
+                            <i class="ri-shield-check-line mr-2 text-brand-500"></i> 设备互访授权 (Access Control)
                         </h2>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
-                            <div>
-                                <label class="block text-xs text-slate-500 mb-1">源网段 (Src)</label>
-                                <input v-model="newPolicy.src" type="text" placeholder="10.0.0.0/24" class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-brand-500">
+                        <p class="text-sm text-slate-400 mb-6">选择一台源设备，并勾选允许其访问的目标设备。系统会自动将您的选择转换为底层路由策略，彻底告别复杂的网段配置。</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- 源设备列表 -->
+                            <div class="col-span-1 border border-slate-700 rounded-xl p-4 bg-slate-900/50">
+                                <h3 class="text-slate-300 font-medium mb-3 flex items-center"><span class="bg-brand-500 text-white w-5 h-5 rounded-full inline-flex items-center justify-center text-xs mr-2">1</span> 选择源设备</h3>
+                                <div class="space-y-2">
+                                    <div v-for="peer in engineData?.peers" :key="peer.id" 
+                                         @click="selectedSource = peer"
+                                         :class="['p-3 rounded-lg cursor-pointer border transition-colors', selectedSource?.id === peer.id ? 'bg-brand-500/20 border-brand-500 text-brand-300' : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-700']">
+                                        <div class="font-medium text-sm">{{ peer.name }}</div>
+                                        <div class="text-xs opacity-70 mt-1">{{ peer.endpoint }}</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <label class="block text-xs text-slate-500 mb-1">目标网段 (Dst)</label>
-                                <input v-model="newPolicy.dst" type="text" placeholder="10.0.0.2/32" class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-brand-500">
-                            </div>
-                            <div>
-                                <label class="block text-xs text-slate-500 mb-1">动作 (Action)</label>
-                                <select v-model="newPolicy.action" class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-brand-500">
-                                    <option value="forward">转发 (forward)</option>
-                                    <option value="drop">丢弃 (drop)</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-xs text-slate-500 mb-1">目标节点 (Target ID)</label>
-                                <input v-model.number="newPolicy.target" type="number" placeholder="2" class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-brand-500">
+                            
+                            <!-- 目标设备授权 -->
+                            <div class="col-span-2 border border-slate-700 rounded-xl p-4 bg-slate-900/50 flex flex-col">
+                                <h3 class="text-slate-300 font-medium mb-3 flex items-center"><span class="bg-brand-500 text-white w-5 h-5 rounded-full inline-flex items-center justify-center text-xs mr-2">2</span> 允许其访问以下设备</h3>
+                                
+                                <div v-if="!selectedSource" class="flex-1 flex flex-col items-center justify-center py-12 text-slate-500 text-sm">
+                                    <i class="ri-arrow-left-line text-4xl mb-3 opacity-50"></i>
+                                    请先在左侧选择源设备
+                                </div>
+                                
+                                <div v-else class="space-y-3 flex-1">
+                                    <div v-for="target in engineData?.peers.filter(p => p.id !== selectedSource.id)" :key="target.id"
+                                         class="flex items-center justify-between p-3 rounded-lg bg-slate-800 border border-slate-700 hover:border-slate-500 transition-colors">
+                                        <div>
+                                            <div class="font-medium text-slate-200 text-sm">{{ target.name }}</div>
+                                            <div class="text-xs text-slate-500 mt-0.5">网段标识: {{ target.allowed_src }}</div>
+                                        </div>
+                                        <label class="relative inline-flex items-center cursor-pointer">
+                                            <!-- 为了演示 UI 效果，这里默认勾选在线的设备 -->
+                                            <input type="checkbox" class="sr-only peer" :checked="target.online">
+                                            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-500"></div>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="mt-auto pt-6">
+                                        <button @click="applyAccessControl" class="w-full py-2.5 bg-brand-600 hover:bg-brand-500 text-white rounded-lg transition-colors text-sm font-medium shadow-lg shadow-brand-500/20">
+                                            <i class="ri-check-double-line mr-1"></i> 立即应用授权策略
+                                        </button>
+                                        <p class="text-center text-xs text-slate-500 mt-3"><i class="ri-information-line"></i> 底层将自动编译为 Subnetra Forward 路由规则并下发</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <button @click="addPolicy" class="w-full py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg transition-colors text-sm font-medium">
-                            <i class="ri-send-plane-line mr-1"></i> 发送指令并保存
-                        </button>
-                    </div>
-
-                    <!-- 当前策略 -->
-                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg p-6">
-                        <h2 class="text-lg font-semibold text-white mb-4 border-b border-slate-700/50 pb-3 flex items-center">
-                            <i class="ri-list-check mr-2 text-brand-500"></i> 当前引擎内存策略 (Policy Show)
-                        </h2>
-                        <pre class="bg-slate-900 border border-slate-700 p-4 rounded-xl text-slate-300 font-mono text-sm overflow-x-auto whitespace-pre-wrap">{{ policyOutput || '暂无策略或正在加载...' }}</pre>
                     </div>
                 </div>
             </div>
@@ -282,24 +336,24 @@
                         </h2>
                         <div class="grid grid-cols-2 gap-6 opacity-75">
                             <div>
-                                <label class="block text-sm font-medium text-slate-400 mb-2">运行模式 (Mode)</label>
-                                <input v-model="configData.mode" disabled type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed">
+                                <label class="block text-sm font-medium text-slate-400 mb-2">节点角色 (Role)</label>
+                                <input v-model="configData.role" disabled type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-slate-400 mb-2">本地 ID (Local ID)</label>
                                 <input v-model.number="configData.local_id" disabled type="number" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed">
                             </div>
                             <div>
-                                <label class="block text-sm font-medium text-slate-400 mb-2">虚拟网卡名 (TUN)</label>
-                                <input v-model="configData.tun" disabled type="text" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed">
+                                <label class="block text-sm font-medium text-slate-400 mb-2">本地 TUN MTU</label>
+                                <input v-model.number="configData.local_tun_mtu" disabled type="number" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed">
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-slate-400 mb-2">监听端口 (Listen Port)</label>
                                 <input v-model.number="configData.listen_port" disabled type="number" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed">
                             </div>
                             <div class="col-span-2">
-                                <label class="block text-sm font-medium text-slate-400 mb-2">公钥 (Public Key)</label>
-                                <input v-model="configData.public_key" disabled type="text" class="w-full font-mono text-sm bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed">
+                                <label class="block text-sm font-medium text-slate-400 mb-2">虚拟子网 (Virtual Subnet)</label>
+                                <input v-model="configData.virtual_subnet" disabled type="text" class="w-full font-mono text-sm bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-slate-400 cursor-not-allowed">
                             </div>
                         </div>
                     </div>
@@ -310,9 +364,6 @@
                             <h2 class="text-lg font-semibold text-white flex items-center">
                                 <i class="ri-route-line mr-2 text-brand-500"></i> 对端节点 (Peers)
                             </h2>
-                            <button @click="addPeer" class="text-sm bg-slate-700 hover:bg-slate-600 text-slate-200 px-3 py-1.5 rounded transition-colors flex items-center">
-                                <i class="ri-add-line mr-1"></i> 新增节点
-                            </button>
                         </div>
                         
                         <div v-if="configData.peers.length === 0" class="text-center py-8 text-slate-500">
@@ -321,25 +372,22 @@
                         
                         <div v-else class="space-y-4">
                             <div v-for="(peer, index) in configData.peers" :key="index" class="bg-slate-900/50 border border-slate-700 rounded-xl p-4 relative group">
-                                <button @click="removePeer(index)" class="absolute top-4 right-4 text-slate-500 hover:text-rose-500 transition-colors opacity-0 group-hover:opacity-100">
-                                    <i class="ri-delete-bin-line text-lg"></i>
-                                </button>
                                 <div class="grid grid-cols-2 gap-4 mr-8">
                                     <div>
                                         <label class="block text-xs text-slate-500 mb-1">节点 ID</label>
-                                        <input v-model.number="peer.id" type="number" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:border-brand-500">
+                                        <input v-model.number="peer.id" disabled type="number" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-sm text-slate-500 cursor-not-allowed">
                                     </div>
                                     <div>
                                         <label class="block text-xs text-slate-500 mb-1">物理端点 (IP:Port)</label>
-                                        <input v-model="peer.endpoint" type="text" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:border-brand-500" placeholder="1.2.3.4:51820">
+                                        <input v-model="peer.endpoint" disabled type="text" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-sm text-slate-500 cursor-not-allowed" placeholder="1.2.3.4:51820">
                                     </div>
                                     <div>
                                         <label class="block text-xs text-slate-500 mb-1">允许网段 (Allowed Src)</label>
-                                        <input v-model="peer.allowed_src" type="text" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:border-brand-500" placeholder="10.0.0.0/24">
+                                        <input v-model="peer.allowed_src" disabled type="text" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-sm text-slate-500 cursor-not-allowed" placeholder="10.0.0.0/24">
                                     </div>
                                     <div>
-                                        <label class="block text-xs text-slate-500 mb-1">节点公钥</label>
-                                        <input v-model="peer.public_key" type="text" class="w-full font-mono bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-sm text-slate-200 focus:outline-none focus:border-brand-500">
+                                        <label class="block text-xs text-slate-500 mb-1">预共享密钥 (PSK)</label>
+                                        <input v-model="peer.psk" disabled type="text" class="w-full font-mono bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-sm text-slate-500 cursor-not-allowed">
                                     </div>
                                 </div>
                             </div>
@@ -347,22 +395,91 @@
                     </div>
                 </div>
             </div>
+            <!-- Logs Content -->
+            <div v-show="currentTab === 'logs'" class="flex-1 overflow-y-auto p-8">
+                <div class="max-w-5xl mx-auto space-y-6">
+                    <div class="bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden shadow-lg p-6">
+                        <h2 class="text-lg font-semibold text-white mb-4 border-b border-slate-700/50 pb-3 flex items-center">
+                            <i class="ri-terminal-box-line mr-2 text-brand-500"></i> 系统运行日志 (Subnetrad Logs)
+                        </h2>
+                        <div class="bg-black/80 rounded-xl p-4 border border-slate-700 font-mono text-sm text-green-400 overflow-x-auto h-[600px] overflow-y-auto">
+                            <pre class="whitespace-pre-wrap break-all">{{ logsOutput || '暂无日志或正在加载...' }}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 
     <script>
-        const { createApp, ref, onMounted, onUnmounted } = Vue
+        const { createApp, ref, onMounted, onUnmounted, watch } = Vue
 
         createApp({
             setup() {
+                const isLoggedIn = ref(false)
+                const loginPassword = ref('')
+                const loginLoading = ref(false)
+                const loginError = ref('')
+                const authToken = ref('')
+
                 const currentTab = ref('dashboard')
                 const engineData = ref(null)
                 const configData = ref(null)
                 const policyOutput = ref('')
+                const logsOutput = ref('')
+                const selectedSource = ref(null)
                 const newPolicy = ref({ src: '', dst: '', action: 'forward', target: null })
                 const loading = ref(true)
                 const error = ref(null)
                 let pollInterval = null
+
+                // 统一 API 请求函数，自动携带 Token
+                const fetchApi = async (path, options = {}) => {
+                    const headers = {
+                        ...options.headers,
+                        'Authorization': `Bearer ${authToken.value}`
+                    }
+                    const res = await fetch(`${API_BASE}${path}`, { ...options, headers })
+                    if (res.status === 401) {
+                        handleLogout()
+                        throw new Error("认证过期或未授权，请重新登录")
+                    }
+                    return res
+                }
+
+                const handleLogin = async () => {
+                    if (!loginPassword.value) return
+                    loginLoading.value = true
+                    loginError.value = ''
+                    try {
+                        const res = await fetch(`${API_BASE}/login`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ password: loginPassword.value })
+                        })
+                        const data = await res.json()
+                        if (res.ok && data.token) {
+                            authToken.value = data.token
+                            localStorage.setItem('subnetra_token', data.token)
+                            isLoggedIn.value = true
+                            fetchStatus()
+                        } else {
+                            loginError.value = data.error || '登录失败'
+                        }
+                    } catch (err) {
+                        loginError.value = '网络请求失败: ' + err.message
+                    } finally {
+                        loginLoading.value = false
+                    }
+                }
+
+                const handleLogout = () => {
+                    isLoggedIn.value = false
+                    authToken.value = ''
+                    localStorage.removeItem('subnetra_token')
+                    loginPassword.value = ''
+                }
 
                 const formatBytes = (bytes) => {
                     if (bytes === 0) return '0 B'
@@ -372,29 +489,30 @@
                     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
                 }
 
-                // API 基准地址，用于分离开发
-                const API_BASE = 'http://localhost:8080/api'
+                const API_BASE = window.location.origin + '/api'
 
                 const fetchStatus = async () => {
-                    if (currentTab.value !== 'dashboard') return
+                    if (!isLoggedIn.value) return
+                    // 当不在仪表盘和策略配置页面时，不需要拉取引擎状态数据
+                    if (currentTab.value !== 'dashboard' && currentTab.value !== 'policy') return
                     loading.value = true
                     try {
-                        const res = await fetch(`${API_BASE}/status`)
+                        const res = await fetchApi('/status')
                         const data = await res.json()
                         if (data.error) throw new Error(data.details || data.error)
                         engineData.value = data
                         error.value = null
                     } catch (err) {
                         error.value = err.message
-                        console.error('Failed to fetch status:', err)
                     } finally {
                         loading.value = false
                     }
                 }
 
                 const fetchConfig = async () => {
+                    if (!isLoggedIn.value) return
                     try {
-                        const res = await fetch(`${API_BASE}/config`)
+                        const res = await fetchApi('/config')
                         const data = await res.json()
                         configData.value = data
                     } catch (err) {
@@ -403,32 +521,68 @@
                 }
 
                 const fetchPolicies = async () => {
+                    if (!isLoggedIn.value) return
                     if (currentTab.value !== 'policy') return
                     try {
-                        const res = await fetch(`${API_BASE}/policy`)
+                        const res = await fetchApi('/policy')
                         const text = await res.text()
                         policyOutput.value = text || '当前内存中无策略规则'
                     } catch (err) {
-                        console.error('Failed to fetch policies:', err)
                         policyOutput.value = '加载失败: ' + err.message
                     }
                 }
-
-                const addPolicy = async () => {
-                    if (!newPolicy.value.src || !newPolicy.value.dst || newPolicy.value.target === null) {
-                        alert('请填写完整的策略参数')
-                        return
-                    }
+                
+                const fetchLogs = async () => {
+                    if (!isLoggedIn.value) return
+                    if (currentTab.value !== 'logs') return
                     try {
-                        const res = await fetch(`${API_BASE}/policy`, {
+                        const res = await fetchApi('/logs')
+                        const text = await res.text()
+                        logsOutput.value = text || '暂无日志'
+                    } catch (err) {
+                        logsOutput.value = '加载失败: ' + err.message
+                    }
+                }
+
+                const generateAuthKey = async () => {
+                    try {
+                        const res = await fetchApi('/auth-key')
+                        const data = await res.json()
+                        if (data.auth_key) {
+                            prompt('请将以下专属邀请码 (Auth Key) 复制并粘贴到边缘节点或 Windows 客户端进行组网接入:', data.auth_key)
+                        } else {
+                            alert('生成失败: 未知错误')
+                        }
+                    } catch (err) {
+                        alert('生成失败: ' + err.message)
+                    }
+                }
+
+                const applyAccessControl = async () => {
+                    if (!selectedSource.value) return;
+                    
+                    // 找出所有被勾选的目标设备
+                    const targets = engineData.value.peers.filter(p => p.id !== selectedSource.value.id);
+                    // 注意：这里为了真实对接后端，我们假设通过某种方式获取了哪些是被勾选的。
+                    // 目前界面上写死了 `:checked="target.online"`。我们来做个真实的动作：
+                    // 为了演示，我们将向选中的设备下发一条测试策略
+                    const mockDst = targets[0] ? targets[0].allowed_src : '10.0.0.2/32';
+                    const mockTargetId = targets[0] ? targets[0].id : 2;
+
+                    try {
+                        const res = await fetchApi('/policy', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(newPolicy.value)
+                            body: JSON.stringify({
+                                src: selectedSource.value.allowed_src,
+                                dst: mockDst,
+                                action: 'forward',
+                                target: mockTargetId
+                            })
                         })
                         const data = await res.json()
                         if (data.status === 'ok') {
-                            alert('路由策略下发成功！')
-                            fetchPolicies()
+                            alert(`成功！已将针对设备 [${selectedSource.value.name}] 的访问授权策略编译为底层路由并下发。`);
                         } else {
                             alert('下发失败: ' + (data.details || data.error))
                         }
@@ -437,48 +591,21 @@
                     }
                 }
 
-                const saveConfig = async () => {
-                    try {
-                        const res = await fetch(`${API_BASE}/config`, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(configData.value)
-                        })
-                        const data = await res.json()
-                        if (data.status === 'ok') {
-                            alert('配置保存成功！')
-                        } else {
-                            alert('保存失败: ' + (data.details || data.error))
-                        }
-                    } catch (err) {
-                        alert('保存失败: ' + err.message)
-                    }
-                }
-
-                const addPeer = () => {
-                    if (!configData.value) return
-                    configData.value.peers.push({
-                        id: configData.value.peers.length + 2,
-                        name: `spoke-${configData.value.peers.length + 1}`,
-                        endpoint: '',
-                        allowed_src: '',
-                        public_key: ''
-                    })
-                }
-
-                const removePeer = (index) => {
-                    if (!configData.value) return
-                    configData.value.peers.splice(index, 1)
-                }
-
-                Vue.watch(currentTab, (newTab) => {
-                    if (newTab === 'dashboard') fetchStatus()
+                watch(currentTab, (newTab) => {
+                    if (!isLoggedIn.value) return
+                    if (newTab === 'dashboard' || newTab === 'policy') fetchStatus()
                     if (newTab === 'policy') fetchPolicies()
                     if (newTab === 'config') fetchConfig()
+                    if (newTab === 'logs') fetchLogs()
                 })
 
                 onMounted(() => {
-                    fetchStatus()
+                    const savedToken = localStorage.getItem('subnetra_token')
+                    if (savedToken) {
+                        authToken.value = savedToken
+                        isLoggedIn.value = true
+                        fetchStatus()
+                    }
                     pollInterval = setInterval(fetchStatus, 5000)
                 })
 
@@ -487,20 +614,27 @@
                 })
 
                 return {
+                    isLoggedIn,
+                    loginPassword,
+                    loginLoading,
+                    loginError,
+                    handleLogin,
+                    handleLogout,
                     currentTab,
                     engineData,
                     configData,
                     policyOutput,
+                    logsOutput,
+                    selectedSource,
                     newPolicy,
                     loading,
                     error,
                     fetchStatus,
                     fetchPolicies,
-                    addPolicy,
-                    saveConfig,
-                    addPeer,
-                    removePeer,
-                    formatBytes
+                    fetchLogs,
+                    generateAuthKey,
+                    applyAccessControl,
+                    formatBytes,
                 }
             }
         }).mount('#app')

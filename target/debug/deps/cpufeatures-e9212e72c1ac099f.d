@@ -1,0 +1,6 @@
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/libcpufeatures-e9212e72c1ac099f.rmeta: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/cpufeatures-0.2.17/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/cpufeatures-0.2.17/src/x86.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/cpufeatures-e9212e72c1ac099f.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/cpufeatures-0.2.17/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/cpufeatures-0.2.17/src/x86.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/cpufeatures-0.2.17/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/cpufeatures-0.2.17/src/x86.rs:

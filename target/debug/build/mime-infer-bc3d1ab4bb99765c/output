@@ -1,0 +1,1 @@
+cargo:rustc-env=MIME_TYPES_GENERATED_PATH=D:\GIT\rust\subnetra-studio\target\debug\build\mime-infer-bc3d1ab4bb99765c\out\mime_types_generated.rs

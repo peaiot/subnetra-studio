@@ -1,0 +1,92 @@
+import { LineEdit, Button, VerticalBox, HorizontalBox } from "std-widgets.slint";
+
+export component MainWindow inherits Window {
+    title: "Subnetra 客户端";
+    width: 380px;
+    height: 480px;
+    background: #0f172a;
+
+    in property <string> connection-status: "离线";
+    in property <bool> is-connected: false;
+    in property <string> error-message: "";
+
+    callback connect-clicked(string);
+
+    VerticalBox {
+        padding: 40px;
+        spacing: 24px;
+        alignment: start;
+
+        // Logo / Title area
+        VerticalBox {
+            spacing: 8px;
+            Text {
+                text: "Subnetra";
+                font-size: 32px;
+                font-weight: 800;
+                color: #38bdf8;
+                horizontal-alignment: center;
+            }
+            Text {
+                text: "企业级虚拟安全网络";
+                font-size: 14px;
+                color: #64748b;
+                horizontal-alignment: center;
+            }
+        }
+
+        // Status Card
+        Rectangle {
+            height: 80px;
+            border-radius: 12px;
+            background: #1e293b;
+            border-width: 1px;
+            border-color: root.is-connected ? #4ade80 : #475569;
+            
+            // Glow effect simulated
+            drop-shadow-blur: root.is-connected ? 15px : 0px;
+            drop-shadow-color: root.is-connected ? #4ade8055 : transparent;
+
+            VerticalBox {
+                alignment: center;
+                Text {
+                    text: root.is-connected ? "已连接" : "未连接";
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: root.is-connected ? #4ade80 : #94a3b8;
+                    horizontal-alignment: center;
+                }
+                Text {
+                    text: "当前状态: " + root.connection-status;
+                    font-size: 12px;
+                    color: #94a3b8;
+                    horizontal-alignment: center;
+                }
+            }
+        }
+
+        auth-input := LineEdit {
+            placeholder-text: "粘贴邀请码 (Auth Key)";
+            height: 45px;
+            font-size: 14px;
+            enabled: !root.is-connected;
+        }
+
+        if root.error-message != "": Text {
+            text: root.error-message;
+            color: #ef4444;
+            font-size: 12px;
+            wrap: word-wrap;
+            horizontal-alignment: center;
+        }
+
+        Button {
+            text: root.is-connected ? "断开连接" : "一键接入";
+            height: 45px;
+            primary: true;
+            clicked => {
+                root.connect-clicked(auth-input.text);
+            }
+        }
+    }
+}

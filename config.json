@@ -1,0 +1,25 @@
+{
+  "negotiation_version": 1,
+  "local_tun_mtu": 1452,
+  "listen_port": 51821,
+  "virtual_subnet": "10.0.0.3/32",
+  "local_tun_ip": "10.0.0.3/32",
+  "local_id": 3,
+  "role": "spoke",
+  "local_routes": [
+    "10.0.0.3/32"
+  ],
+  "remote_routes": [
+    "10.0.0.0/24"
+  ],
+  "keepalive_secs": 20,
+  "peers": [
+    {
+      "id": 1,
+      "name": "Hub-Node",
+      "endpoint": "47.117.92.155:51820",
+      "allowed_src": "10.0.0.0/24",
+      "psk": "766ddc97e26591672b609c206d45c14154f3d1d20534d02c9cadcd338003336a"
+    }
+  ]
+}

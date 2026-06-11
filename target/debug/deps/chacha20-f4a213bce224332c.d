@@ -1,0 +1,12 @@
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/libchacha20-f4a213bce224332c.rmeta: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/variants.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/rng.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/../README.md /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/soft.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/avx2.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/sse2.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/chacha20-f4a213bce224332c.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/variants.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/rng.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/../README.md /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/soft.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/avx2.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/sse2.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/variants.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/rng.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/../README.md:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/soft.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/avx2.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/chacha20-0.10.0/src/backends/sse2.rs:

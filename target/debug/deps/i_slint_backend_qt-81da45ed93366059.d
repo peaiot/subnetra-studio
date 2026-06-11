@@ -1,0 +1,8 @@
+D:\GIT\rust\subnetra-studio\target\debug\deps\libi_slint_backend_qt-81da45ed93366059.rmeta: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\accessible_generated.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\key_generated.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\README.md
+
+D:\GIT\rust\subnetra-studio\target\debug\deps\i_slint_backend_qt-81da45ed93366059.d: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\accessible_generated.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\key_generated.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\README.md
+
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\accessible_generated.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\key_generated.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\i-slint-backend-qt-1.2.0\README.md:

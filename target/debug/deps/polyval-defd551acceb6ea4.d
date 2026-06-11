@@ -1,0 +1,10 @@
+D:\GIT\rust\subnetra-studio\target\debug\deps\libpolyval-defd551acceb6ea4.rmeta: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\soft64.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\mulx.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\autodetect.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\clmul.rs
+
+D:\GIT\rust\subnetra-studio\target\debug\deps\polyval-defd551acceb6ea4.d: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\soft64.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\mulx.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\autodetect.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\clmul.rs
+
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\soft64.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\mulx.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\autodetect.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-0dccff568467c15b\polyval-0.6.2\src\backend\clmul.rs:

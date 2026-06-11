@@ -1,0 +1,8 @@
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/libpercent_encoding-631c0fe3b07fcfcb.rmeta: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/percent-encoding-2.3.2/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/percent-encoding-2.3.2/src/ascii_set.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/libpercent_encoding-631c0fe3b07fcfcb.rlib: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/percent-encoding-2.3.2/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/percent-encoding-2.3.2/src/ascii_set.rs
+
+/mnt/d/GIT/rust/subnetra-studio/target/debug/deps/percent_encoding-631c0fe3b07fcfcb.d: /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/percent-encoding-2.3.2/src/lib.rs /root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/percent-encoding-2.3.2/src/ascii_set.rs
+
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/percent-encoding-2.3.2/src/lib.rs:
+/root/.cargo/registry/src/mirrors.ustc.edu.cn-38d0e5eb5da2abae/percent-encoding-2.3.2/src/ascii_set.rs:

@@ -1,0 +1,8 @@
+{
+  "negotiation_version": 1,
+  "local_tun_mtu": 1452,
+  "listen_port": 51820,
+  "virtual_subnet": "10.0.0.0/24",
+  "local_id": 1,
+  "peers": []
+}

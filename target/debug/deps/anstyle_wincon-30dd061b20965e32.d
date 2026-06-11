@@ -1,0 +1,10 @@
+D:\GIT\rust\subnetra-studio\target\debug\deps\libanstyle_wincon-30dd061b20965e32.rmeta: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\ansi.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\stream.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\windows.rs
+
+D:\GIT\rust\subnetra-studio\target\debug\deps\libanstyle_wincon-30dd061b20965e32.rlib: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\ansi.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\stream.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\windows.rs
+
+D:\GIT\rust\subnetra-studio\target\debug\deps\anstyle_wincon-30dd061b20965e32.d: C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\lib.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\ansi.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\stream.rs C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\windows.rs
+
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\ansi.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\stream.rs:
+C:\Users\Administrator\.cargo\registry\src\mirrors.ustc.edu.cn-38d0e5eb5da2abae\anstyle-wincon-3.0.11\src\windows.rs:

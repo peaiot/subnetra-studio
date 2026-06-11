@@ -1,0 +1,11 @@
+D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\deps\libsocket2-b33d29694a48f5ce.rmeta: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sockaddr.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\socket.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sockref.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sys\unix.rs
+
+D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\deps\libsocket2-b33d29694a48f5ce.rlib: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sockaddr.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\socket.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sockref.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sys\unix.rs
+
+D:\GIT\rust\subnetra-studio\target\x86_64-unknown-linux-musl\release\deps\socket2-b33d29694a48f5ce.d: C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\lib.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sockaddr.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\socket.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sockref.rs C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sys\unix.rs
+
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\lib.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sockaddr.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\socket.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sockref.rs:
+C:\Users\Administrator\.cargo\registry\src\rsproxy.cn-e3de039b2554c837\socket2-0.6.4\src\sys\unix.rs:
